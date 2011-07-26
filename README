@@ -2,15 +2,18 @@ Current Version is alpha 0.1
 
 ==INSTALLATION==
 
-To install you just have to take the jar file out of the dist folder and put it some place convenient for you.
+1) Make sure you have Java installed on your OS (I only tested the tool with Linux, but it may run on any OS that uses the aticonfig executable)
+2) To install you just have to take the jar file out of the dist folder and put it some place convenient for you.
 
 ==RUN==
 
 Run with
-"java -jarlfcc.jar"
+"java -jar lfcc.jar"
 
-Make sure to set permissions of the created fancontrol.sh file to executable for your user with "chmod 750 fancontrol.sh" until I implemented this by default.
-The file fancontrol get created when you click on "commit" button for the first time.
+==IMPORTANT==
+
+Make sure to set permissions of the fancontrol.sh and overclock.sh files to executable for your user with "chmod 750 fancontrol.sh" until I implemented this by default.
+The file fancontrol get created when you click on "commit" button for the first time. The file overclock gets not created yet. These files are 100% necessary to be in the folder of the lfcc.jar file when you run tehe program
 
 ==ROADMAP==
 
