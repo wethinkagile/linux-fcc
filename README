@@ -1,9 +1,23 @@
 Current Version is alpha 0.1
 
+==INSTALLATION==
+
+To install you just have to take the jar file out of the dist folder and put it some place convenient for you.
+
+==RUN==
+
+Run with
+"java -jarlfcc.jar"
+
+Make sure to set permissions of the created fancontrol.sh file to executable for your user with "chmod 750 fancontrol.sh" until I implemented this by default.
+The file fancontrol get created when you click on "commit" button for the first time.
+
+==ROADMAP==
+
 to implement for ver. beta 0.1
 - get rid of phoenix logic, since I failed to implement bitcoin mining based on pyhton
 - add persistent clocks, after restart of fcc
 
 ANY HELP OR SUGGESTION IS WELCOME
 
-
+Email: stephan.kristyn@ecomail.at
