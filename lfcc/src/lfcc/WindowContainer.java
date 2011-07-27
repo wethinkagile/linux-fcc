@@ -36,7 +36,7 @@ public class WindowContainer extends JFrame {
 
     private JMenuBar bar;
     private JMenu fileMenu;
-    private JMenuItem startAgainMenu;
+    private JMenuItem aboutMenu;
     private JMenuItem exitMenu;
 
     // Panels
@@ -425,13 +425,12 @@ public class WindowContainer extends JFrame {
          bar = new JMenuBar();
         setJMenuBar(bar);
         fileMenu = new JMenu("File");
-        startAgainMenu = new JMenuItem("About");
+        aboutMenu = new JMenuItem("About");
         exitMenu = new JMenuItem("Exit");
         bar.add(fileMenu);
-        fileMenu.add(startAgainMenu);
+        fileMenu.add(aboutMenu);
         fileMenu.add(exitMenu);
-        //exitMenu.addActionListener(new MenuSelection());
-       // startAgainMenu.addActionListener(new MenuSelection());
-
+        exitMenu.addActionListener(new MenuSelection(1));
+        aboutMenu.addActionListener(new MenuSelection(2));
     }
 }
