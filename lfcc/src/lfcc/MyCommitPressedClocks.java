@@ -20,6 +20,7 @@ public class MyCommitPressedClocks implements ActionListener {
     private JComboBox ComboboxGPUNo;
     private JComboBox ComboboxMEMNo;
     private int adapterNo;
+    private boolean exists;
 
     public MyCommitPressedClocks (int adapterNo, JComboBox ComboboxGPUNo, JComboBox ComboboxMEMNo){
         this.ComboboxGPUNo = ComboboxGPUNo;
@@ -28,7 +29,32 @@ public class MyCommitPressedClocks implements ActionListener {
     }
 
     public void actionPerformed (ActionEvent e) {
+           
+        // check if fancontrol file is there
+        File file=new File(WindowContainer.path.getText() + "overclock.sh");
+        exists = file.exists();
+        if (!exists) {
+            // returns false if File or directory does not exist
+            System.out.println("Creating overclock file..");
+            try {
+              // Create fancontrol file
+              FileWriter fstream = new FileWriter(WindowContainer.path.getText() + "fancontrol.sh");
+              BufferedWriter out = new BufferedWriter(fstream);
+              out.write("#!/bin/bash" + "\n");
+              out.write("DISPLAY=:0 aticonfig --od-enable --adapter=all" + "\n");
+              out.write("DISPLAY=:0 aticonfig --od-setclocks=$2,$3 --adapter=$1" + "\n");
 
+              //Close the output stream
+              out.close();
+              // setpermissions
+              File newFile=new File(WindowContainer.path.getText() + "overclock.sh");
+              newFile.setExecutable(true,true);
+            }
+            catch (Exception ea){//Catch exception if any
+              System.err.println("Error: " + ea.getMessage());
+            }
+        }
+        
         try {
           String bash_str;
           String execString = WindowContainer.path.getText() + "overclock.sh " + adapterNo + " " + ComboboxGPUNo.getSelectedItem() + " " + ComboboxMEMNo.getSelectedItem();

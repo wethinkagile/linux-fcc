@@ -44,8 +44,8 @@ public class MyCommitPressed implements ActionListener {
               //Close the output stream
               out.close();
               // setpermissions
-              //File newFile=new File(WindowContainer.path.getText() + "fancontrol.sh");
-              //newFile.setExecutable(1,1);
+              File newFile=new File(WindowContainer.path.getText() + "fancontrol.sh");
+              newFile.setExecutable(true,true);
             }
             catch (Exception ea){//Catch exception if any
               System.err.println("Error: " + ea.getMessage());

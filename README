@@ -1,4 +1,12 @@
-Current Version is alpha 0.1
+Current Version is beta 0.1
+
+==ABOUT==
+
+I wrote this tool to manage my AMD GPUs and memclocks, fanspeeds and temperatures graphically in Linux. 
+
+I also wanted to implement mining in some form, but this is kind of hard b/c phoenix.py updates constantly and I would have to read that info into the GUI, which I did not manage to achieve yet. The according file is called "MyPressedMiners.java", however I deleted the GUI code from the  WindowContainer class.
+
+As is, the tool does a fairly good job of managing and monitoring up to 4 GPU's in your Linux system. You might have to adjust the source code for your needs.
 
 ==INSTALLATION==
 
@@ -10,16 +18,25 @@ Current Version is alpha 0.1
 Run with
 "java -jar lfcc.jar"
 
-==IMPORTANT==
+==TROUBLESHOOTING==
 
-Make sure to set permissions of the fancontrol.sh and overclock.sh files to executable for your user with "chmod 750 fancontrol.sh" until I implemented this by default.
-The file fancontrol get created when you click on "commit" button for the first time. The file overclock gets not created yet. These files are 100% necessary to be in the folder of the lfcc.jar file when you run tehe program
+THe program may crash after some time due too many open aticonfig commands. This has to be fixed yet and the behaviour is expected.
+
+Make sure the permissions of the fancontrol.sh and overclock.sh files are set to executable for your user, this should be done by the Java program itself usually.
+
+The file fancontrol get created when you click on "commit" button for the first time. 
+
+The file overclock gets created when you click on the "set" button for the first time. 
+
+These files are necessary to be in the folder of the lfcc.jar file when you run the program. Alternatively you can adjust the folder path in the GUI.
 
 ==ROADMAP==
 
-to implement for ver. beta 0.1
-- get rid of phoenix logic, since I failed to implement bitcoin mining based on pyhton
+to implement for ver. 0.1 RTM
 - add persistent clocks, after restart of fcc
+- fix aticonfig crash bug
+- implement python bitcoin mining (phoenix has to be altered because it conflicts with the buffered/filereader of the Java API)
+
 
 ANY HELP OR SUGGESTION IS WELCOME
 
