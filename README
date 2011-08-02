@@ -1,5 +1,11 @@
 Current Version is 0.1
 
+==LICENSE / COPYLEFT ==
+
+This program is licensed under the GNU General Public License v3 of the Free Software Foundation. This software must remain free to distribute copies and open to read the source. If you intend to close this software's source or deny someone the right to copy it I will personally sue you. http://www.gnu.org/licenses/gpl.html
+
+
+
 ==ABOUT==
 
 I wrote this tool to manage my AMD GPUs and memclocks, fanspeeds and temperatures graphically in Linux. 
