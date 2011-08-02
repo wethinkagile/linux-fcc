@@ -109,7 +109,7 @@ public class WindowContainer extends JFrame {
     public WindowContainer ()
     {
         setSize(465,620);
-        setTitle("Linux Fan and Clock Control - alpha 0.1");
+        setTitle("Linux Fan and Clock Control - 0.1");
         setLocation(350,300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -227,16 +227,16 @@ public class WindowContainer extends JFrame {
 
         // call every n seconds the regex aticonfigTEMP class
         timerTemp0 = new Timer();
-        timerTemp0.schedule(new RegExAtiConfigTemp(0, templabel0), 0, 15*1000);
+        timerTemp0.schedule(new RegExAtiConfigTemp(0, templabel0), 0, 8*1000);
         
         timerTemp1 = new Timer();
-        timerTemp1.schedule(new RegExAtiConfigTemp(1, templabel1), 0, 15*1000);
+        timerTemp1.schedule(new RegExAtiConfigTemp(1, templabel1), 0, 8*1000);
         
         timerTemp2 = new Timer();
-        timerTemp2.schedule(new RegExAtiConfigTemp(2, templabel2), 0, 15*1000);
+        timerTemp2.schedule(new RegExAtiConfigTemp(2, templabel2), 0, 8*1000);
         
         timerTemp3 = new Timer();
-        timerTemp3.schedule(new RegExAtiConfigTemp(3, templabel3), 0, 15*1000);
+        timerTemp3.schedule(new RegExAtiConfigTemp(3, templabel3), 0, 8*1000);
 
         // Panel - Clocks
         // This is just the section header label

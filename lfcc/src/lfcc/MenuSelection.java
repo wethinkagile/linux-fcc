@@ -5,6 +5,8 @@
 package lfcc;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
 
 
 /**
@@ -27,8 +29,8 @@ public class MenuSelection implements ActionListener {
         }
         
         else if (menuItem == 2) {
-            WindowContainer.area.append("To show your appreciation for this little tool please send some Bitcoins to 18QeVng1ArbTBoyFTXGwk78caQgDESUC4v" + "\n");
-            WindowContainer.area.setCaretPosition(WindowContainer.area.getDocument().getLength());
+            JDialog f = new AboutDialog(new JFrame());
+            f.show();
         }
     }
     
