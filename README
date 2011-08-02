@@ -32,7 +32,7 @@ These files are necessary to be in the folder of the lfcc.jar file when you run 
 
 ==ROADMAP==
 
-to implement for ver. 0.1 RTM
+to implement for future versions:
 - add persistent clocks, after restart of fcc
 - fix aticonfig crash bug
 - implement python bitcoin mining (phoenix has to be altered because it conflicts with the buffered/filereader of the Java API)
