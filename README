@@ -1,6 +1,6 @@
 Current Version is 0.1
 
-==LICENSE / COPYLEFT ==
+==LICENSE / COPYLEFT==
 
 This program is licensed under the GNU General Public License v3 of the Free Software Foundation. This software must remain free to distribute copies and open to read the source. If you intend to close this software's source or deny someone the right to copy it I will personally sue you. http://www.gnu.org/licenses/gpl.html
 
@@ -15,7 +15,8 @@ As is, the tool does a fairly good job of managing and monitoring up to 4 GPU's 
 ==INSTALLATION==
 
 1) Make sure you have Java installed on your OS (I only tested the tool with Linux, but it may run on any OS that uses the aticonfig executable)
-2) To install you just have to take the jar file out of the dist folder and put it some place convenient for you.
+2) Build the lfcc.jar from source
+3) To install you just have to take the jar file out of the dist folder and put it some place convenient for you.
 
 ==RUN==
 
